@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>تأكيد الطلب - Bot Forge</title>
+    <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="bg-light text-end">
+  <div class="container py-5">
+    <h2 class="text-center mb-4">تأكيد الطلب</h2>
+    <div id="order-summary" class="mb-4"></div>
+
+    <form action="https://formspree.io/f/xanjvwkb" method="POST">
+      <input type="hidden" name="order_details" id="order_details">
+      <div class="mb-3">
+        <label for="name" class="form-label">الاسم الكامل</label>
+        <input type="text" class="form-control" name="name" required>
+      </div>
+      <div class="mb-3">
+        <label for="phone" class="form-label">رقم الهاتف</label>
+        <input type="tel" class="form-control" name="phone" required>
+      </div>
+      <div class="mb-3">
+        <label for="whatsapp" class="form-label">رقم واتساب العميل</label>
+        <input type="tel" class="form-control" name="whatsapp" required
+               pattern="^(\+20|0)?1[0-9]{9}$"
+               title="رقم واتساب غير صحيح. يجب أن يكون مثل 01012345678 أو +201012345678">
+      </div>
+      <div class="mb-3">
+        <label for="address" class="form-label">العنوان</label>
+        <textarea class="form-control" name="address" rows="3" required></textarea>
+      </div>
+      <p class="text-center mb-3"><strong>للاستفسار:</strong> واتساب <a href="https://wa.me/201552781806">+201552781806</a></p>
+      <button type="submit" class="btn btn-primary w-100">إرسال الطلب</button>
+    </form>
+  </div>
+
+  <script>
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const summaryDiv = document.getElementById("order-summary");
+    const hiddenField = document.getElementById("order_details");
+
+    if (cart.length === 0) {
+      summaryDiv.innerHTML = '<p class="text-danger">السلة فارغة</p>';
+    } else {
+      let summaryHtml = '<ul class="list-group">';
+      let orderText = '';
+      let total = 0;
+
+      cart.forEach(item => {
+        const line = `<li class="list-group-item d-flex justify-content-between">
+                        <span>${item.name}</span>
+                        <span>${item.qty} × ${item.price} = ${item.price * item.qty} جنيه</span>
+                      </li>`;
+        summaryHtml += line;
+        total += item.price * item.qty;
+        orderText += `${item.name} (x${item.qty}) - ${item.price * item.qty} جنيه\n`;
+      });
+
+      summaryHtml += `<li class="list-group-item d-flex justify-content-between fw-bold">
+                        <span>الإجمالي</span>
+                        <span>${total} جنيه</span>
+                      </li>`;
+      summaryHtml += '</ul>';
+
+      summaryDiv.innerHTML = summaryHtml;
+      hiddenField.value = orderText + `\nالإجمالي: ${total} جنيه`;
+    }
+  </script>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

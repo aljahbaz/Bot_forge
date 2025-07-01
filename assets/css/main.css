@@ -1185,7 +1185,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Portfolio Section
+#   
 --------------------------------------------------------------*/
 .portfolio .portfolio-filters {
   padding: 0;
@@ -1645,6 +1645,15 @@ section,
 .portfolio-details .swiper-button-prev:hover:after,
 .portfolio-details .swiper-button-next:hover:after {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-content img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain; /* or 'cover' if تفضل الصورة تملى الإطار */
+  background-color: #f9f9f9; /* لون خلفية خفيف لو الصورة صغيرة */
+  padding: 10px;
+  border-radius: 8px;
 }
 
 @media (max-width: 575px) {

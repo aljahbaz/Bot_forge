@@ -43,7 +43,7 @@
       <a href="index.html" class="logo d-flex align-items-center me-auto">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename"><img src="assets/img/logo.png" alt="">Bot Forge</h1><span>.</span>
+        <h1 class="sitename"><img src="assets/img/logo.png" alt="">Bot Forge</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -112,6 +112,7 @@
           <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
             <li data-filter="*" class="filter-active">All</li>
             <li data-filter=".filter-arduino">Arduino</li>
+            <li data-filter=".filter-kits">Kits</li>
             <li data-filter=".filter-sensor">Sensors</li>
             <li data-filter=".filter-motors">Motors</li>
             <li data-filter=".filter-power">Power</li>
@@ -221,7 +222,7 @@
                 </div>
               </div> -->
 
-              <div class="col-lg-4 col-md-6 portfolio-item filter-kit">
+              <div class="col-lg-4 col-md-6 portfolio-item filter-kits">
                     <div class="portfolio-content h-100">
                       <img src="assets/img/product/arduino-kit.jpg" class="img-fluid" alt="Arduino Starter Kit">
                       <div class="portfolio-info text-center">
@@ -269,7 +270,7 @@
                 }
             </style>
               <!-- car Kit -->
-              <div class="col-lg-4 col-md-6 portfolio-item filter-sensors">
+              <div class="col-lg-4 col-md-6 portfolio-item filter-kits">
                 <div class="portfolio-content h-100">
                   <img src="assets/img/product/car.jpg" class="img-fluid" alt="Car Chassis">
                   <div class="portfolio-info text-center">
@@ -283,7 +284,7 @@
               </div>
 
               <!-- leds -->
-              <div class="col-lg-4 col-md-6 portfolio-item filter-sensors">
+              <div class="col-lg-4 col-md-6 portfolio-item filter-accessories">
                 <div class="portfolio-content h-100">
                   <img src="assets/img/product/gled.jpg" class="img-fluid" alt="Green leds">
                   <div class="portfolio-info text-center">
@@ -296,7 +297,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-4 col-md-6 portfolio-item filter-sensors">
+              <div class="col-lg-4 col-md-6 portfolio-item filter-accessories">
                 <div class="portfolio-content h-100">
                   <img src="assets/img/product/Rled.jpg" class="img-fluid" alt="Red leds">
                   <div class="portfolio-info text-center">
@@ -309,7 +310,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-4 col-md-6 portfolio-item filter-sensors">
+              <div class="col-lg-4 col-md-6 portfolio-item filter-accessories">
                 <div class="portfolio-content h-100">
                   <img src="assets/img/product/yled.jpg" class="img-fluid" alt="Yellow leds">
                   <div class="portfolio-info text-center">
@@ -322,18 +323,20 @@
                 </div>
               </div>
 
-              <div class="col-lg-4 col-md-6 portfolio-item filter-sensors">
-                <div class="portfolio-content h-100">
-                  <img src="assets/img/product/bled.jpg" class="img-fluid" alt="Blue leds">
-                  <div class="portfolio-info text-center">
-                    <h5 class="card-title">Blue leds</h5>
-                    <p>leds</p>
-                    <p><strong>السعر:</strong> 1جنيه</p>
-                    <input type="number" id="qty-bleds" value="1" min="1" class="form-control mb-2">
-                    <button class="btn btn-primary w-100" onclick="addToCart('Blue leds', 1, 'qty-bleds')">أضف إلى السلة</button>
-                  </div>
-                </div>
-              </div>
+              <div class="col-lg-4 col-md-6 portfolio-item filter-accessories"> 
+      <div class="portfolio-content h-100"> 
+        <img src="assets/img/product/rgb-led.jpg" class="img-fluid" alt="RGB LED"> 
+        <div class="portfolio-info text-center"> 
+          <h5 class="card-title">RGB LED</h5> 
+          <p>RGB Light Emitting Diode</p> 
+          <p><strong>السعر:</strong> 20 جنيه</p> 
+          <input type="number" id="qty-rgb-led" value="1" min="1" class="form-control mb-2"> 
+          <button class="btn btn-primary w-100" onclick="addToCart('RGB LED', 20, 'qty-rgb-led')">أضف إلى السلة</button> 
+        </div> 
+      </div> 
+    </div>
+
+              
 
             <!-- Breadboard -->
             <div class="col-lg-4 col-md-6 portfolio-item filter-accessories">
@@ -356,9 +359,9 @@
                 <div class="portfolio-info text-center">
                   <h5 class="card-title">Jumper Wires Male-Male</h5>
                   <p>أسلاك توصيل ذكر - ذكر</p>
-                  <p><strong>السعر:</strong> 10 جنيه</p>
+                  <p><strong>السعر:</strong> 1 جنيه</p>
                   <input type="number" id="qty-mm" value="1" min="1" class="form-control mb-2">
-                  <button class="btn btn-primary w-100" onclick="addToCart('Jumper Wires Male-Male', 10, 'qty-mm')">أضف إلى السلة</button>
+                  <button class="btn btn-primary w-100" onclick="addToCart('Jumper Wires Male-Male', 1, 'qty-mm')">أضف إلى السلة</button>
                 </div>
               </div>
             </div>
@@ -370,9 +373,9 @@
                 <div class="portfolio-info text-center">
                   <h5 class="card-title">Jumper Wires Male-Female</h5>
                   <p>أسلاك توصيل ذكر - أنثى</p>
-                  <p><strong>السعر:</strong> 10 جنيه</p>
+                  <p><strong>السعر:</strong> 1 جنيه</p>
                   <input type="number" id="qty-mf" value="1" min="1" class="form-control mb-2">
-                  <button class="btn btn-primary w-100" onclick="addToCart('Jumper Wires Male-Female', 10, 'qty-mf')">أضف إلى السلة</button>
+                  <button class="btn btn-primary w-100" onclick="addToCart('Jumper Wires Male-Female', 1, 'qty-mf')">أضف إلى السلة</button>
                 </div>
               </div>
             </div>
@@ -384,14 +387,27 @@
                 <div class="portfolio-info text-center">
                   <h5 class="card-title">Jumper Wires Female-Female</h5>
                   <p>أسلاك توصيل أنثى - أنثى</p>
-                  <p><strong>السعر:</strong> 10 جنيه</p>
+                  <p><strong>السعر:</strong> 1 جنيه</p>
                   <input type="number" id="qty-ff" value="1" min="1" class="form-control mb-2">
-                  <button class="btn btn-primary w-100" onclick="addToCart('Jumper Wires Female-Female', 10, 'qty-ff')">أضف إلى السلة</button>
+                  <button class="btn btn-primary w-100" onclick="addToCart('Jumper Wires Female-Female', 1, 'qty-ff')">أضف إلى السلة</button>
                 </div>
               </div>
             </div>
 
-            <!-- 9V Battery -->
+            <div class="col-lg-4 col-md-6 portfolio-item filter-accessories">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/product/220om.jpg" class="img-fluid" alt="Resistor 220">
+                <div class="portfolio-info text-center">
+                  <h5 class="card-title">Resistor 220 ohm</h5>
+                  <p>مقاومة لتقيل من شدة الجهد </p>
+                  <p><strong>السعر:</strong> 0.25 جنيه</p>
+                  <input type="number" id="qty-ff" value="1" min="1" class="form-control mb-2">
+                  <button class="btn btn-primary w-100" onclick="addToCart('Resistor 220 ohm', 0.25, 'qty-ff')">أضف إلى السلة</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3.7V Battery -->
             <div class="col-lg-4 col-md-6 portfolio-item filter-power">
               <div class="portfolio-content h-100">
                 <img src="assets/img/product/3.7v-battery.jpg" class="img-fluid" alt="3.7V Battery">
@@ -411,7 +427,7 @@
                 <img src="assets/img/product/4hbattery.jpg" class="img-fluid" alt="Battery Holder">
                 <div class="portfolio-info text-center">
                   <h5 class="card-title">Battery Holder*4</h5>
-                  <p>لتجميع البطاريات في مكان واحد/p>
+                  <p>لتجميع البطاريات في مكان واحد</p>
                   <p><strong>السعر:</strong> 25 جنيه</p>
                   <input type="number" id="qty-4hbattery" value="1" min="1" class="form-control mb-2">
                   <button class="btn btn-primary w-100" onclick="addToCart('Battery Holder', 25, 'qty-4hbattery')">أضف إلى السلة</button>
@@ -424,7 +440,7 @@
                 <img src="assets/img/product/3hbattery.jpg" class="img-fluid" alt="Battery Holder">
                 <div class="portfolio-info text-center">
                   <h5 class="card-title">Battery Holder*3</h5>
-                  <p>لتجميع البطاريات في مكان واحد/p>
+                  <p>لتجميع البطاريات في مكان واحد</p>
                   <p><strong>السعر:</strong> 20 جنيه</p>
                   <input type="number" id="qty-3hbattery" value="1" min="1" class="form-control mb-2">
                   <button class="btn btn-primary w-100" onclick="addToCart('Battery Holder', 20, 'qty-3hbattery')">أضف إلى السلة</button>
@@ -437,7 +453,7 @@
                 <img src="assets/img/product/2hbattery.jpg" class="img-fluid" alt="Battery Holder">
                 <div class="portfolio-info text-center">
                   <h5 class="card-title">Battery Holder*2</h5>
-                  <p>لتجميع البطاريات في مكان واحد/p>
+                  <p>لتجميع البطاريات في مكان واحد</p>
                   <p><strong>السعر:</strong> 26 جنيه</p>
                   <input type="number" id="qty-2hbattery" value="1" min="1" class="form-control mb-2">
                   <button class="btn btn-primary w-100" onclick="addToCart('Battery Holder', 26, 'qty-2hbattery')">أضف إلى السلة</button>
@@ -446,7 +462,7 @@
             </div>
 
             <!-- Bluetooth Module HC-05 -->
-            <div class="col-lg-4 col-md-6 portfolio-item filter-communication">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-accessories">
               <div class="portfolio-content h-100">
                 <img src="assets/img/product/hc-05.jpg" class="img-fluid" alt="Bluetooth Module HC-05">
                 <div class="portfolio-info text-center">
@@ -464,14 +480,41 @@
               <div class="portfolio-content h-100">
                 <img src="assets/img/product/relay.jpg" class="img-fluid" alt="Relay">
                 <div class="portfolio-info text-center">
-                  <h5 class="card-title">Relay 2 Channels </h5>
+                  <h5 class="card-title">Relay one Channels </h5>
                   <p>بطارية لتغذية الدوائر</p>
-                  <p><strong>السعر:</strong> 60 جنيه</p>
-                  <input type="number" id="qty-battery" value="1" min="1" class="form-control mb-2">
-                  <button class="btn btn-primary w-100" onclick="addToCart('3.7V Battery', 60, 'qty-battery')">أضف إلى السلة</button>
+                  <p><strong>السعر:</strong> 40 جنيه</p>
+                  <input type="number" id="qty-relay" value="1" min="1" class="form-control mb-2">
+                  <button class="btn btn-primary w-100" onclick="addToCart('Relay one Channels', 40, 'relay')">أضف إلى السلة</button>
                 </div>
               </div>
             </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-power">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/product/2relay.jpg" class="img-fluid" alt="Relay">
+                <div class="portfolio-info text-center">
+                  <h5 class="card-title">Relay 2 Channels </h5>
+                  <p>بطارية لتغذية الدوائر</p>
+                  <p><strong>السعر:</strong> 60 جنيه</p>
+                  <input type="number" id="qty-2relay" value="1" min="1" class="form-control mb-2">
+                  <button class="btn btn-primary w-100" onclick="addToCart('Relay 2 Channels', 60, 'qty-2relay')">أضف إلى السلة</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-power">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/product/4relay.jpg" class="img-fluid" alt="Relay">
+                <div class="portfolio-info text-center">
+                  <h5 class="card-title">Relay 4 Channels </h5>
+                  <p>بطارية لتغذية الدوائر</p>
+                  <p><strong>السعر:</strong> 145 جنيه</p>
+                  <input type="number" id="qty-4relay" value="1" min="1" class="form-control mb-2">
+                  <button class="btn btn-primary w-100" onclick="addToCart('Relay 4 Channels', 145, 'qty-4relay')">أضف إلى السلة</button>
+                </div>
+              </div>
+            </div>
+
             <!-- IR Sensor -->
             <div class="col-lg-4 col-md-6 portfolio-item filter-sensor">
               <div class="portfolio-content h-100">
@@ -482,6 +525,19 @@
                   <p><strong>السعر:</strong> 30 جنيه</p>
                   <input type="number" id="qty-irsensor" value="1" min="1" class="form-control mb-2">
                   <button class="btn btn-primary w-100" onclick="addToCart('IR Sensor', 30, 'qty-irsensor')">أضف إلى السلة</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-sensor">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/product/light-sensor-micor.jpg" class="img-fluid" alt="IR Sensor">
+                <div class="portfolio-info text-center">
+                  <h5 class="card-title">Light Sensor</h5>
+                  <p>حساس الأشعة تحت الحمراء للكشف عن العوائق</p>
+                  <p><strong>السعر:</strong> 30 جنيه</p>
+                  <input type="number" id="qty-lsensor" value="1" min="1" class="form-control mb-2">
+                  <button class="btn btn-primary w-100" onclick="addToCart('IR Sensor', 30, 'qty-lsensor')">أضف إلى السلة</button>
                 </div>
               </div>
             </div>
@@ -543,7 +599,7 @@
             </div>
 
             <!-- Servo Motor 180 -->
-            <div class="col-lg-4 col-md-6 portfolio-item filter-motor">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-motors">
               <div class="portfolio-content h-100">
                 <img src="assets/img/product/servo.jpg" class="img-fluid" alt="Servo Motor">
                 <div class="portfolio-info text-center">
@@ -557,7 +613,7 @@
             </div>
 
              <!-- Servo Motor 180 -->
-            <div class="col-lg-4 col-md-6 portfolio-item filter-motor">
+            <div class="col-lg-4 col-md-6 portfolio-item filter-motors">
               <div class="portfolio-content h-100">
                 <img src="assets/img/product/mservo.jpg" class="img-fluid" alt="Metal Servo Motor">
                 <div class="portfolio-info text-center">

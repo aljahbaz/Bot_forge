@@ -1642,6 +1642,17 @@ section,
   transition: 0.3s;
 }
 
+.kit-items-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px 16px;
+    list-style-type: disc;
+    padding-left: 20px;
+    max-height: 200px;
+    height: 60px;
+    overflow-y: auto;
+    text-align: start;
+  }
 .portfolio-details .swiper-button-prev:hover:after,
 .portfolio-details .swiper-button-next:hover:after {
   background-color: rgba(0, 0, 0, 0.3);

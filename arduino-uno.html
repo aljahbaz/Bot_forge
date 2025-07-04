@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Arduino UNO - Bot Forge</title>
+  <meta name="description" content="Arduino UNO development board product page." />
+  <meta name="keywords" content="Arduino UNO, development board, electronics" />
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet" />
+</head>
+
+<body class="portfolio-page">
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container position-relative d-flex align-items-center">
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename"><img src="assets/img/logo.png" alt="" />Bot Forge</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="product.html" class="active">Product</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div class="header-social-links">
+        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- Page Title -->
+    <div class="page-title accent-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Arduino UNO</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Arduino UNO</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <!-- End Page Title -->
+
+    <!-- Product Section -->
+    <section id="portfolio" class="portfolio section">
+      <div class="container">
+        <section class="container py-5">
+          <div class="row">
+            <!-- Product Images -->
+            <div class="col-md-6">
+              <img
+                id="main-product-img"
+                src="assets/img/product/arduino-uno.jpg"
+                class="img-fluid rounded shadow mb-3"
+                alt="Arduino UNO"
+              />
+
+              <div class="d-flex gap-2 overflow-auto">
+                <img
+                  src="assets/img/product/arduino-uno.jpg"
+                  class="img-thumbnail"
+                  width="100"
+                  onclick="setMainImage(this)"
+                  alt="Arduino UNO Front"
+                />
+                <!-- <img
+                  src="assets/img/product/arduino-uno-back.jpg"
+                  class="img-thumbnail"
+                  width="100"
+                  onclick="setMainImage(this)"
+                  alt="Arduino UNO Back"
+                /> -->
+              </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="col-md-6">
+              <h2 class="fw-bold">Arduino UNO</h2>
+              <p class="text-muted">The most popular development board, suitable for most projects.</p>
+
+              <h4><strong>Price:</strong> EGP 450</h4>
+              <p><strong>Microcontroller:</strong> ATmega328P</p>
+              <p><strong>Operating Voltage:</strong> 5V</p>
+              <p><strong>Input Voltage (recommended):</strong> 7-12V</p>
+              <p><strong>Digital I/O Pins:</strong> 14 (of which 6 provide PWM output)</p>
+              <p><strong>Analog Input Pins:</strong> 6</p>
+
+              <label for="qty-uno" class="form-label mt-3">Quantity:</label>
+              <input
+                type="number"
+                id="qty-uno"
+                value="1"
+                min="1"
+                class="form-control w-50 mb-3"
+              />
+
+              <button class="btn btn-primary w-100" onclick="addToCart('Arduino UNO', 450, 'qty-uno')">
+                Add to Cart
+              </button>
+
+              <div class="mt-4">
+                <a href="assets/datasheets/arduino-uno-datasheet.pdf" class="btn btn-outline-secondary w-100" target="_blank"
+                  >Download Datasheet</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <hr class="my-5" />
+
+          <!-- Related Products -->
+          <div class="row">
+            <h4 class="mb-4">Related Products</h4>
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-arduino">
+                <div class="portfolio-content h-100 p-3 border rounded shadow-sm">
+                  <a href="arduino-mega.html">
+                    <img src="assets/img/product/mega.jpg" class="img-fluid mb-2 rounded" alt="Arduino Mega">
+                  </a>
+                  <div class="portfolio-info text-center">
+                    <a href="arduino-mega.html" style="text-decoration: none; color: inherit;">
+                      <h5 class="card-title">Arduino Mega</h5>
+                    </a>
+                    <p>A powerful development board for large and complex projects</p>
+                    <p><strong>Price:</strong> EGP 1500</p>
+                    <input type="number" id="qty-mega" value="1" min="1" class="form-control mb-2">
+                    <button class="btn btn-primary w-100" onclick="addToCart('Arduino Mega', 1500, 'qty-mega')">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Arduino Nano -->
+              <div class="col-lg-4 col-md-6 portfolio-item filter-arduino">
+                <div class="portfolio-content h-100 p-3 border rounded shadow-sm">
+                  <a href="arduino-nano.html">
+                    <img src="assets/img/product/nano.png" class="img-fluid mb-2 rounded" alt="Arduino Nano">
+                  </a>
+                  <div class="portfolio-info text-center">
+                    <a href="arduino-nano.html" style="text-decoration: none; color: inherit;">
+                      <h5 class="card-title">Arduino Nano</h5>
+                    </a>
+                    <p>A compact development board for small-scale projects</p>
+                    <p><strong>Price:</strong> EGP 250</p>
+                    <input type="number" id="qty-nano" value="1" min="1" class="form-control mb-2">
+                    <button class="btn btn-primary w-100" onclick="addToCart('Arduino Nano', 250, 'qty-nano')">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Arduino UNO Cable -->
+              <div class="col-lg-4 col-md-6 portfolio-item filter-accessories">
+                <div class="portfolio-content h-100 p-3 border rounded shadow-sm">
+                  <a href="product-arduino-cable.html">
+                    <img src="assets/img/product/cable-arduino-uno.jpg" class="img-fluid mb-2 rounded" alt="Arduino UNO Cable">
+                  </a>
+                  <div class="portfolio-info text-center">
+                    <a href="product-arduino-cable.html" style="text-decoration: none; color: inherit;">
+                      <h5 class="card-title">Arduino UNO Cable</h5>
+                    </a>
+                    <p>USB cable for Arduino UNO programming</p>
+                    <p><strong>Price:</strong> 25 EGP</p>
+                    <input type="number" id="qty-arduino-cable" value="1" min="1" class="form-control mb-2">
+                    <button class="btn btn-primary w-100" onclick="addToCart('Arduino UNO Cable', 25, 'qty-arduino-cable')">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+        </section>
+
+        <!-- Toast Notification -->
+        <div id="toast-container" class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999;"></div>
+
+        <script>
+          function addToCart(productName, price, qtyInputId) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            const qty = parseInt(document.getElementById(qtyInputId).value) || 1;
+            if (qty <= 0) return;
+
+            cart = cart.filter((item) => item.name !== productName);
+            cart.push({ name: productName, price: price, qty: qty });
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            showToast(`${qty} × ${productName} added to cart.`);
+          }
+
+          function showToast(message) {
+            const toast = document.createElement("div");
+            toast.className = "toast align-items-center text-white bg-success border-0 show";
+            toast.role = "alert";
+            toast.innerHTML = `
+              <div class="d-flex">
+                <div class="toast-body">${message}</div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+              </div>
+            `;
+            document.getElementById("toast-container").appendChild(toast);
+            setTimeout(() => toast.remove(), 4000);
+          }
+
+          function setMainImage(imgElement) {
+            const mainImg = document.getElementById("main-product-img");
+            mainImg.src = imgElement.src;
+          }
+        </script>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Bot Forge</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p class="mt-3"><strong>Phone:</strong> <span>+201552781806</span></p>
+            <p><strong>Email:</strong> <span>borforge101@gmail.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12 footer-newsletter">
+          <h4>Our Newsletter</h4>
+          <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+          <form action="forms/newsletter.php" method="post" class="php-email-form">
+            <div class="newsletter-form">
+              <input type="email" name="email" />
+              <input type="submit" value="Subscribe" />
+            </div>
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Bot Forge</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        Designed by
+        <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by
+        <a href="https://themewagon.com">ThemeWagon</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      var grid = document.querySelector(".isotope-container");
+      if (grid) {
+        var iso = new Isotope(grid, {
+          itemSelector: ".portfolio-item",
+          layoutMode: "fitRows",
+        });
+
+        // فلترة
+        let filters = document.querySelectorAll(".portfolio-filters li");
+        filters.forEach((filter) => {
+          filter.addEventListener("click", function () {
+            filters.forEach((el) => el.classList.remove("filter-active"));
+            this.classList.add("filter-active");
+            let filterValue = this.getAttribute("data-filter");
+            iso.arrange({ filter: filterValue });
+          });
+        });
+      }
+    });
+  </script>
+
+  <script>
+    function setMainImage(imgElement) {
+      const mainImg = document.getElementById("main-product-img");
+      mainImg.src = imgElement.src;
+    }
+  </script>
+</body>
+
+</html>

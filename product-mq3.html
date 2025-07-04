@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>MQ-3 Gas Sensor - Bot Forge</title>
+  <meta name="description" content="MQ-3 Gas Sensor product page." />
+  <meta name="keywords" content="MQ-3, gas sensor, alcohol detection, electronics" />
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Raleway&family=Nunito&display=swap" rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet" />
+</head>
+
+<body class="portfolio-page">
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container position-relative d-flex align-items-center">
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename"><img src="assets/img/logo.png" alt="" />Bot Forge</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="product.html" class="active">Product</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <div class="header-social-links">
+        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="page-title accent-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">MQ-3 Gas Sensor</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">MQ-3 Gas Sensor</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <section class="portfolio section">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-md-6">
+            <img id="main-product-img" src="assets/img/product/mq3.jpg" class="img-fluid rounded shadow mb-3" alt="MQ-3 Gas Sensor" />
+            <div class="d-flex gap-2 overflow-auto">
+              <img src="assets/img/product/mq3.jpg" class="img-thumbnail" width="100" onclick="setMainImage(this)" alt="Sensor view" />
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <h2 class="fw-bold">MQ-3 Gas Sensor</h2>
+            <p class="text-muted">Detects alcohol, benzene, and other vapors. Suitable for breathalyzers and environmental monitoring.</p>
+            <h4><strong>Price:</strong> EGP 90</h4>
+            <p><strong>Detection Range:</strong> 0.05 – 10 mg/L (alcohol)</p>
+            <p><strong>Operating Voltage:</strong> 5V</p>
+            <p><strong>Analog Output:</strong> Varies based on concentration</p>
+            <label for="qty-mq3" class="form-label mt-3">Quantity:</label>
+            <input type="number" id="qty-mq3" value="1" min="1" class="form-control w-50 mb-3" />
+            <button class="btn btn-primary w-100" onclick="addToCart('MQ-3 Gas Sensor', 90, 'qty-mq3')">Add to Cart</button>
+          </div>
+        </div>
+
+        <hr class="my-5" />
+        <h4 class="mb-4">Related Products</h4>
+        <div class="row">
+          <!-- MQ-2 Gas Sensor -->
+                <div class="col-lg-4 col-md-6 portfolio-item filter-sensor">
+                  <div class="portfolio-content h-100 p-3 border rounded shadow-sm">
+                    <a href="product-mq2.html">
+                      <img src="assets/img/product/mq2.jpg" class="img-fluid mb-2 rounded" alt="MQ-2 Gas Sensor">
+                    </a>
+                    <div class="portfolio-info text-center">
+                      <a href="product-mq2.html" style="text-decoration: none; color: inherit;">
+                        <h5 class="card-title">MQ-2 Gas Sensor</h5>
+                      </a>
+                      <p>Detects gases like LPG, smoke, propane</p>
+                      <p><strong>Price:</strong> 90 EGP</p>
+                      <input type="number" id="qty-mq2" value="1" min="1" class="form-control mb-2">
+                      <button class="btn btn-primary w-100" onclick="addToCart('MQ-2 Gas Sensor', 90, 'qty-mq2')">Add to Cart</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- MQ-4 Gas Sensor -->
+                <div class="col-lg-4 col-md-6 portfolio-item filter-sensor">
+                  <div class="portfolio-content h-100 p-3 border rounded shadow-sm">
+                    <a href="product-mq4.html">
+                      <img src="assets/img/product/mq4.jpg" class="img-fluid mb-2 rounded" alt="MQ-4 Gas Sensor">
+                    </a>
+                    <div class="portfolio-info text-center">
+                      <a href="product-mq4.html" style="text-decoration: none; color: inherit;">
+                        <h5 class="card-title">MQ-4 Gas Sensor</h5>
+                      </a>
+                      <p>Detects methane and natural gas</p>
+                      <p><strong>Price:</strong> 90 EGP</p>
+                      <input type="number" id="qty-mq4" value="1" min="1" class="form-control mb-2">
+                      <button class="btn btn-primary w-100" onclick="addToCart('MQ-4 Gas Sensor', 90, 'qty-mq4')">Add to Cart</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- MQ-5 Gas Sensor -->
+                <div class="col-lg-4 col-md-6 portfolio-item filter-sensor">
+                  <div class="portfolio-content h-100 p-3 border rounded shadow-sm">
+                    <a href="product-mq5.html">
+                      <img src="assets/img/product/mq5.jpg" class="img-fluid mb-2 rounded" alt="MQ-5 Gas Sensor">
+                    </a>
+                    <div class="portfolio-info text-center">
+                      <a href="product-mq5.html" style="text-decoration: none; color: inherit;">
+                        <h5 class="card-title">MQ-5 Gas Sensor</h5>
+                      </a>
+                      <p>Detects LPG, methane, and hydrogen</p>
+                      <p><strong>Price:</strong> 65 EGP</p>
+                      <input type="number" id="qty-mq5" value="1" min="1" class="form-control mb-2">
+                      <button class="btn btn-primary w-100" onclick="addToCart('MQ-5 Gas Sensor', 65, 'qty-mq5')">Add to Cart</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- MQ-6 Gas Sensor -->
+                  <div class="col-lg-4 col-md-6 portfolio-item filter-sensor">
+                    <div class="portfolio-content h-100 p-3 border rounded shadow-sm">
+                      <a href="product-mq6.html">
+                        <img src="assets/img/product/mq6.jpg" class="img-fluid mb-2 rounded" alt="MQ-6 Gas Sensor">
+                      </a>
+                      <div class="portfolio-info text-center">
+                        <a href="product-mq6.html" style="text-decoration: none; color: inherit;">
+                          <h5 class="card-title">MQ-6 Gas Sensor</h5>
+                        </a>
+                        <p>Detects butane, LPG, and natural gas</p>
+                        <p><strong>Price:</strong> 90 EGP</p>
+                        <input type="number" id="qty-mq6" value="1" min="1" class="form-control mb-2">
+                        <button class="btn btn-primary w-100" onclick="addToCart('MQ-6 Gas Sensor', 90, 'qty-mq6')">Add to Cart</button>
+                      </div>
+                    </div>
+                  </div>
+
+                <!-- MQ-7 Gas Sensor -->
+                <div class="col-lg-4 col-md-6 portfolio-item filter-sensor">
+                  <div class="portfolio-content h-100 p-3 border rounded shadow-sm">
+                    <a href="product-mq7.html">
+                      <img src="assets/img/product/mq7.jpg" class="img-fluid mb-2 rounded" alt="MQ-7 Gas Sensor">
+                    </a>
+                    <div class="portfolio-info text-center">
+                      <a href="product-mq7.html" style="text-decoration: none; color: inherit;">
+                        <h5 class="card-title">MQ-7 Gas Sensor</h5>
+                      </a>
+                      <p>Detects carbon monoxide</p>
+                      <p><strong>Price:</strong> 90 EGP</p>
+                      <input type="number" id="qty-mq7" value="1" min="1" class="form-control mb-2">
+                      <button class="btn btn-primary w-100" onclick="addToCart('MQ-7 Gas Sensor', 90, 'qty-mq7')">Add to Cart</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- MQ-9 Gas Sensor -->
+                <div class="col-lg-4 col-md-6 portfolio-item filter-sensor">
+                  <div class="portfolio-content h-100 p-3 border rounded shadow-sm">
+                    <a href="product-mq9.html">
+                      <img src="assets/img/product/mq9.jpg" class="img-fluid mb-2 rounded" alt="MQ-9 Gas Sensor">
+                    </a>
+                    <div class="portfolio-info text-center">
+                      <a href="product-mq9.html" style="text-decoration: none; color: inherit;">
+                        <h5 class="card-title">MQ-9 Gas Sensor</h5>
+                      </a>
+                      <p>Detects CO, methane, and propane</p>
+                      <p><strong>Price:</strong> 90 EGP</p>
+                      <input type="number" id="qty-mq9" value="1" min="1" class="form-control mb-2">
+                      <button class="btn btn-primary w-100" onclick="addToCart('MQ-9 Gas Sensor', 90, 'qty-mq9')">Add to Cart</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- MQ-135 Gas Sensor -->
+                <div class="col-lg-4 col-md-6 portfolio-item filter-sensor">
+                  <div class="portfolio-content h-100 p-3 border rounded shadow-sm">
+                    <a href="product-mq135.html">
+                      <img src="assets/img/product/mq135.jpg" class="img-fluid mb-2 rounded" alt="MQ-135 Gas Sensor">
+                    </a>
+                    <div class="portfolio-info text-center">
+                      <a href="product-mq135.html" style="text-decoration: none; color: inherit;">
+                        <h5 class="card-title">MQ-135 Gas Sensor</h5>
+                      </a>
+                      <p>Detects toxic gases and air quality</p>
+                      <p><strong>Price:</strong> 85 EGP</p>
+                      <input type="number" id="qty-mq135" value="1" min="1" class="form-control mb-2">
+                      <button class="btn btn-primary w-100" onclick="addToCart('MQ-135 Gas Sensor', 85, 'qty-mq135')">Add to Cart</button>
+                    </div>
+                  </div>
+                </div>
+
+        </div>
+
+        <div id="toast-container" class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999;"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Bot Forge</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p><strong>Phone:</strong> <span>+201552781806</span></p>
+            <p><strong>Email:</strong> <span>borforge101@gmail.com</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function addToCart(productName, price, qtyInputId) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const qty = parseInt(document.getElementById(qtyInputId).value) || 1;
+      if (qty <= 0) return;
+      cart = cart.filter((item) => item.name !== productName);
+      cart.push({ name: productName, price: price, qty: qty });
+      localStorage.setItem("cart", JSON.stringify(cart));
+      showToast(`${qty} × ${productName} added to cart.`);
+    }
+
+    function showToast(message) {
+      const toast = document.createElement("div");
+      toast.className = "toast align-items-center text-white bg-success border-0 show";
+      toast.role = "alert";
+      toast.innerHTML = `<div class="d-flex"><div class="toast-body">${message}</div><button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button></div>`;
+      document.getElementById("toast-container").appendChild(toast);
+      setTimeout(() => toast.remove(), 4000);
+    }
+
+    function setMainImage(imgElement) {
+      const mainImg = document.getElementById("main-product-img");
+      mainImg.src = imgElement.src;
+    }
+  </script>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

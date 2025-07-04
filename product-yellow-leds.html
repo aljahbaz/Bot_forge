@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Yellow LEDs - Bot Forge</title>
+  <meta name="description" content="Yellow LEDs product page." />
+  <meta name="keywords" content="yellow LED, electronics, components" />
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Raleway&family=Nunito&display=swap" rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet" />
+</head>
+
+<body class="portfolio-page">
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container position-relative d-flex align-items-center">
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename"><img src="assets/img/logo.png" alt="" />Bot Forge</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="product.html" class="active">Product</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+      <div class="header-social-links">
+        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="page-title accent-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Yellow LEDs</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Yellow LEDs</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <section class="portfolio section">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-md-6">
+            <img id="main-product-img" src="assets/img/product/yled.jpg" class="img-fluid rounded shadow mb-3" alt="Yellow LEDs" />
+            <div class="d-flex gap-2 overflow-auto">
+              <img src="assets/img/product/yled.jpg" class="img-thumbnail" width="100" onclick="setMainImage(this)" alt="Yellow LEDs Thumbnail" />
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <h2 class="fw-bold">Yellow LEDs</h2>
+            <p class="text-muted">High-brightness yellow LEDs for electronic circuits and indicators</p>
+            <h4><strong>Price:</strong> EGP 1</h4>
+            <p><strong>Color:</strong> Yellow</p>
+            <p><strong>Forward Voltage:</strong> 2.0V</p>
+            <p><strong>Current:</strong> 20mA</p>
+            <label for="qty-yleds" class="form-label mt-3">Quantity:</label>
+            <input type="number" id="qty-yleds" value="1" min="1" class="form-control w-50 mb-3" />
+            <button class="btn btn-primary w-100" onclick="addToCart('Yellow LEDs', 1, 'qty-yleds')">Add to Cart</button>
+          </div>
+        </div>
+
+        <hr class="my-5" />
+        <h4 class="mb-4">Related Products</h4>
+        <div class="row">
+          <!-- Green LEDs -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-accessories"> 
+              <div class="portfolio-content h-100 p-3 border rounded shadow-sm"> 
+                <a href="product-gled.html">
+                  <img src="assets/img/product/gled.jpg" class="img-fluid mb-2 rounded" alt="Green LEDs" />
+                </a>
+                <div class="portfolio-info text-center"> 
+                  <a href="product-gled.html" style="text-decoration: none; color: inherit;">
+                    <h5 class="card-title">Green LEDs</h5> 
+                  </a>
+                  <p>LEDs</p> 
+                  <p><strong>السعر:</strong> 1 جنيه</p> 
+                  <input type="number" id="qty-gleds" value="1" min="1" class="form-control mb-2" /> 
+                  <button class="btn btn-primary w-100" onclick="addToCart('Green LEDs', 1, 'qty-gleds')">أضف إلى السلة</button> 
+                </div> 
+              </div> 
+            </div>
+
+            <!-- Red LEDs -->
+            <div class="col-lg-4 col-md-6 portfolio-item filter-accessories">
+              <div class="portfolio-content h-100 p-3 border rounded shadow-sm">
+                <a href="product-red-leds.html">
+                  <img src="assets/img/product/Rled.jpg" class="img-fluid mb-2 rounded" alt="Red LEDs">
+                </a>
+                <div class="portfolio-info text-center">
+                  <a href="product-red-leds.html" style="text-decoration: none; color: inherit;">
+                    <h5 class="card-title">Red LEDs</h5>
+                  </a>
+                  <p>Bright red light-emitting diodes</p>
+                  <p><strong>Price:</strong> EGP 1</p>
+                  <input type="number" id="qty-rleds" value="1" min="1" class="form-control mb-2">
+                  <button class="btn btn-primary w-100" onclick="addToCart('Red LEDs', 1, 'qty-rleds')">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Blue LEDs -->
+            <div class="col-lg-4 col-md-6 portfolio-item filter-accessories">
+              <div class="portfolio-content h-100 p-3 border rounded shadow-sm">
+                <a href="product-blue-leds.html">
+                  <img src="assets/img/product/bled.jpg" class="img-fluid mb-2 rounded" alt="Blue LEDs">
+                </a>
+                <div class="portfolio-info text-center">
+                  <a href="product-blue-leds.html" style="text-decoration: none; color: inherit;">
+                    <h5 class="card-title">Blue LEDs</h5>
+                  </a>
+                  <p>Bright blue light-emitting diodes</p>
+                  <p><strong>Price:</strong> EGP 1</p>
+                  <input type="number" id="qty-bleds" value="1" min="1" class="form-control mb-2">
+                  <button class="btn btn-primary w-100" onclick="addToCart('Blue LEDs', 1, 'qty-bleds')">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- RGB LED -->
+            <div class="col-lg-4 col-md-6 portfolio-item filter-accessories">
+              <div class="portfolio-content h-100 p-3 border rounded shadow-sm">
+                <img src="assets/img/product/rgb-led.jpg" class="img-fluid mb-2 rounded" alt="RGB LED">
+                <div class="portfolio-info text-center">
+                  <h5 class="card-title">RGB LED</h5>
+                  <p>RGB Light Emitting Diode</p>
+                  <p><strong>السعر:</strong> 20 جنيه</p>
+                  <input type="number" id="qty-rgb-led" value="1" min="1" class="form-control mb-2">
+                  <button class="btn btn-primary w-100" onclick="addToCart('RGB LED', 20, 'qty-rgb-led')">أضف إلى السلة</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Buzzer -->
+            <div class="col-lg-4 col-md-6 portfolio-item filter-accessories">
+              <div class="portfolio-content h-100 p-3 border rounded shadow-sm">
+                <a href="product-buzzer.html">
+                  <img src="assets/img/product/buzzer.jpg" class="img-fluid mb-2 rounded" alt="Buzzer">
+                </a>
+                <div class="portfolio-info text-center">
+                  <a href="product-buzzer.html" style="text-decoration: none; color: inherit;">
+                    <h5 class="card-title">Buzzer</h5>
+                  </a>
+                  <p>Audio signaling device</p>
+                  <p><strong>Price:</strong> 10 EGP</p>
+                  <input type="number" id="qty-buzzer" value="1" min="1" class="form-control mb-2">
+                  <button class="btn btn-primary w-100" onclick="addToCart('Buzzer', 10, 'qty-buzzer')">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Breadboard -->
+            <div class="col-lg-4 col-md-6 portfolio-item filter-accessories">
+                <div class="portfolio-content h-100 p-3 border rounded shadow-sm">
+                  <a href="product-breadboard.html">
+                    <img src="assets/img/product/breadboard.jpg" class="img-fluid mb-2 rounded" alt="Breadboard">
+                  </a>
+                  <div class="portfolio-info text-center">
+                    <a href="product-breadboard.html" style="text-decoration: none; color: inherit;">
+                      <h5 class="card-title">Breadboard</h5>
+                    </a>
+                    <p>Solderless breadboard for prototyping circuits</p>
+                    <p><strong>Price:</strong> 50 EGP</p>
+                    <input type="number" id="qty-breadboard" value="1" min="1" class="form-control mb-2">
+                    <button class="btn btn-primary w-100" onclick="addToCart('Breadboard', 50, 'qty-breadboard')">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+
+
+            <!-- Jumper Wires Male-Male -->
+            <div class="col-lg-4 col-md-6 portfolio-item filter-accessories">
+                <div class="portfolio-content h-100 p-3 border rounded shadow-sm">
+                  <a href="product-female-male-wires.html">
+                    <img src="assets/img/product/female-male-wires.jpg" class="img-fluid mb-2 rounded" alt="Female to Male Wires">
+                  </a>
+                  <div class="portfolio-info text-center">
+                    <a href="product-female-male-wires.html" style="text-decoration: none; color: inherit;">
+                      <h5 class="card-title">Female to Male Wires</h5>
+                    </a>
+                    <p>Flexible jumper wires for breadboards and modules</p>
+                    <p><strong>Price:</strong> 15 EGP</p>
+                    <input type="number" id="qty-female-male-wires" value="1" min="1" class="form-control mb-2">
+                    <button class="btn btn-primary w-100" onclick="addToCart('Female to Male Wires', 15, 'qty-female-male-wires')">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+
+
+            <!-- Jumper Wires Male-Female -->
+            <div class="col-lg-4 col-md-6 portfolio-item filter-accessories">
+                <div class="portfolio-content h-100 p-3 border rounded shadow-sm">
+                  <a href="product-male-male-wires.html">
+                    <img src="assets/img/product/male-male-wires.jpg" class="img-fluid mb-2 rounded" alt="Male to Male Wires">
+                  </a>
+                  <div class="portfolio-info text-center">
+                    <a href="product-male-male-wires.html" style="text-decoration: none; color: inherit;">
+                      <h5 class="card-title">Male to Male Wires</h5>
+                    </a>
+                    <p>Flexible jumper wires for breadboards and modules</p>
+                    <p><strong>Price:</strong> 15 EGP</p>
+                    <input type="number" id="qty-male-male-wires" value="1" min="1" class="form-control mb-2">
+                    <button class="btn btn-primary w-100" onclick="addToCart('Male to Male Wires', 15, 'qty-male-male-wires')">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+
+
+
+            <!-- Jumper Wires Female-Female -->
+            <div class="col-lg-4 col-md-6 portfolio-item filter-accessories">
+              <div class="portfolio-content h-100 p-3 border rounded shadow-sm">
+                <a href="product-female-female-wires.html">
+                  <img src="assets/img/product/female-female-wires.jpg" class="img-fluid mb-2 rounded" alt="Female to Female Wires">
+                </a>
+                <div class="portfolio-info text-center">
+                  <a href="product-female-female-wires.html" style="text-decoration: none; color: inherit;">
+                    <h5 class="card-title">Female to Female Wires</h5>
+                  </a>
+                  <p>Set of jumper wires with female connectors on both ends</p>
+                  <p><strong>Price:</strong> 15 EGP</p>
+                  <input type="number" id="qty-female-female-wires" value="1" min="1" class="form-control mb-2" />
+                  <button class="btn btn-primary w-100" onclick="addToCart('Female to Female Wires', 15, 'qty-female-female-wires')">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Resistor 220 Ohm -->
+            <div class="col-lg-4 col-md-6 portfolio-item filter-accessories">
+                <div class="portfolio-content h-100 p-3 border rounded shadow-sm">
+                  <a href="product-resistors.html">
+                    <img src="assets/img/product/resistors.jpg" class="img-fluid mb-2 rounded" alt="Resistors">
+                  </a>
+                  <div class="portfolio-info text-center">
+                    <a href="product-resistors.html" style="text-decoration: none; color: inherit;">
+                      <h5 class="card-title">Resistors</h5>
+                    </a>
+                    <p>Set of assorted resistors for electronic projects</p>
+                    <p><strong>Price:</strong> 0.5 EGP</p>
+                    <input type="number" id="qty-resistors" value="1" min="1" class="form-control mb-2" />
+                    <button class="btn btn-primary w-100" onclick="addToCart('Resistors', 0.5, 'qty-resistors')">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+        </div>
+
+        <div id="toast-container" class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999;"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Bot Forge</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p><strong>Phone:</strong> <span>+201552781806</span></p>
+            <p><strong>Email:</strong> <span>borforge101@gmail.com</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function addToCart(productName, price, qtyInputId) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const qty = parseInt(document.getElementById(qtyInputId).value) || 1;
+      if (qty <= 0) return;
+      cart = cart.filter((item) => item.name !== productName);
+      cart.push({ name: productName, price: price, qty: qty });
+      localStorage.setItem("cart", JSON.stringify(cart));
+      showToast(`${qty} × ${productName} added to cart.`);
+    }
+
+    function showToast(message) {
+      const toast = document.createElement("div");
+      toast.className = "toast align-items-center text-white bg-success border-0 show";
+      toast.role = "alert";
+      toast.innerHTML = `<div class="d-flex"><div class="toast-body">${message}</div><button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button></div>`;
+      document.getElementById("toast-container").appendChild(toast);
+      setTimeout(() => toast.remove(), 4000);
+    }
+
+    function setMainImage(imgElement) {
+      const mainImg = document.getElementById("main-product-img");
+      mainImg.src = imgElement.src;
+    }
+  </script>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

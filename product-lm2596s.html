@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>TP4056 TYPE-C Module - Bot Forge</title>
+  <meta name="description" content="TP4056 TYPE-C 1A Lithium battery charging module with protection." />
+  <meta name="keywords" content="TP4056, lithium battery charger, type-c, charging module" />
+
+  <link href="assets/img/favicon.png" rel="icon" />
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/css/main.css" rel="stylesheet" />
+</head>
+
+<body class="portfolio-page">
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container position-relative d-flex align-items-center">
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename"><img src="assets/img/logo.png" alt="" />Bot Forge</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="product.html" class="active">Product</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+ <section class="container py-5">
+  <div class="row">
+    <!-- صور المنتج -->
+    <div class="col-md-6">
+      <img id="main-product-img" src="assets/img/product/l298n.jpg" class="img-fluid rounded shadow mb-3" alt="L298N Motor Driver">
+
+      <!-- صور مصغرة ديناميكية -->
+      <div class="d-flex gap-2 overflow-auto">
+        <img src="assets/img/product/l298n.jpg" class="img-thumbnail" width="100" onclick="setMainImage(this)" alt="Driver Front">
+        <img src="assets/img/product/l298n-side.jpg" class="img-thumbnail" width="100" onclick="setMainImage(this)" alt="Driver Side">
+        <img src="assets/img/product/l298n-wiring.jpg" class="img-thumbnail" width="100" onclick="setMainImage(this)" alt="Wiring Diagram">
+      </div>
+    </div>
+
+    <!-- معلومات المنتج -->
+    <div class="col-md-6">
+      <h2 class="fw-bold">L298N Motor Driver</h2>
+      <p class="text-muted">Motor driver for DC motors and gearboxes</p>
+
+      <h4><strong>Price:</strong> 85 EGP</h4>
+      <p><strong>Type:</strong> Dual H-Bridge Motor Driver</p>
+      <p><strong>Operating Voltage:</strong> 5V - 35V</p>
+      <p><strong>Max Current:</strong> 2A per channel</p>
+
+      <label for="qty-l298n" class="form-label mt-3">Quantity:</label>
+      <input type="number" id="qty-l298n" value="1" min="1" class="form-control w-50 mb-3">
+
+      <button class="btn btn-primary w-100" onclick="addToCart('L298N Motor Driver', 85, 'qty-l298n')">
+        Add to Cart
+      </button>
+
+      <div class="mt-4">
+        <a href="assets/datasheets/l298n-datasheet.pdf" class="btn btn-outline-secondary w-100" target="_blank">
+          Download Datasheet
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="my-5">
+
+  <!-- منتجات ذات صلة -->
+  <div class="row">
+    <h4 class="mb-4">Related Products</h4>
+
+                <!-- Car Chassis -->
+            <div class="col-lg-4 col-md-6 portfolio-item filter-kits">
+              <div class="portfolio-content h-100 p-3 border rounded shadow-sm">
+                <a href="car-chassis.html">
+                  <img src="assets/img/product/car.jpg" class="img-fluid mb-2 rounded" alt="Car Chassis">
+                </a>
+                <div class="portfolio-info text-center">
+                  <h5 class="card-title">Car Chassis</h5>
+                  <p>Car Chassis with wheels</p>
+                  <p><strong>السعر:</strong> 400 جنيه</p>
+                  <input type="number" id="qty-car" value="1" min="1" class="form-control mb-2">
+                  <button class="btn btn-primary w-100" onclick="addToCart('Car Chassis', 400, 'qty-car')">أضف إلى السلة</button>
+                </div>
+              </div>
+            </div>
+
+                  <!-- DC Motor -->
+              <div class="col-lg-4 col-md-6 portfolio-item filter-motors">
+                <div class="portfolio-content h-100 p-3 border rounded shadow-sm">
+                  <a href="dc-motor.html">
+                    <img src="assets/img/product/dc-motor.jpg" class="img-fluid mb-2 rounded" alt="DC Motor">
+                  </a>
+                  <div class="portfolio-info text-center">
+                    <a href="dc-motor.html" style="text-decoration: none; color: inherit;">
+                      <h5 class="card-title">DC Motor</h5>
+                    </a>
+                    <p>Standard DC motor for basic projects</p>
+                    <p><strong>Price:</strong> EGP 25</p>
+                    <input type="number" id="qty-dcmotor" value="1" min="1" class="form-control mb-2">
+                    <button class="btn btn-primary w-100" onclick="addToCart('DC Motor', 25, 'qty-dcmotor')">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+</section>
+
+<script>
+  function addToCart(productName, price, qtyInputId) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const qty = parseInt(document.getElementById(qtyInputId).value) || 1;
+    if (qty <= 0) return;
+
+    cart = cart.filter(item => item.name !== productName);
+    cart.push({ name: productName, price: price, qty: qty });
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    showToast(`${qty} × ${productName} added to cart.`);
+  }
+
+  function showToast(message) {
+    const toast = document.createElement("div");
+    toast.className = "toast align-items-center text-white bg-success border-0 show";
+    toast.role = "alert";
+    toast.innerHTML = `
+      <div class="d-flex">
+        <div class="toast-body">${message}</div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+      </div>
+    `;
+    document.getElementById("toast-container").appendChild(toast);
+    setTimeout(() => toast.remove(), 4000);
+  }
+
+  function setMainImage(imgElement) {
+    const mainImg = document.getElementById("main-product-img");
+    mainImg.src = imgElement.src;
+  }
+</script>
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Bot Forge</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p><strong>Phone:</strong> <span>+201552781806</span></p>
+            <p><strong>Email:</strong> <span>borforge101@gmail.com</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function addToCart(productName, price, qtyInputId) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const qty = parseInt(document.getElementById(qtyInputId).value) || 1;
+      if (qty <= 0) return;
+      cart = cart.filter((item) => item.name !== productName);
+      cart.push({ name: productName, price: price, qty: qty });
+      localStorage.setItem("cart", JSON.stringify(cart));
+      showToast(`${qty} × ${productName} added to cart.`);
+    }
+
+    function showToast(message) {
+      const toast = document.createElement("div");
+      toast.className = "toast align-items-center text-white bg-success border-0 show";
+      toast.role = "alert";
+      toast.innerHTML = `<div class="d-flex"><div class="toast-body">${message}</div><button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button></div>`;
+      document.getElementById("toast-container").appendChild(toast);
+      setTimeout(() => toast.remove(), 4000);
+    }
+  </script>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Ultrasonic Sensor HC-SR04 - Bot Forge</title>
+  <meta name="description" content="Ultrasonic Sensor HC-SR04 product page." />
+  <meta name="keywords" content="ultrasonic sensor, hc-sr04, distance measurement, robotics, electronics" />
+
+  <link href="assets/img/favicon.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Raleway&family=Nunito&display=swap" rel="stylesheet" />
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/css/main.css" rel="stylesheet" />
+</head>
+
+<body class="portfolio-page">
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container position-relative d-flex align-items-center">
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename"><img src="assets/img/logo.png" alt="" />Bot Forge</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="product.html" class="active">Product</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="page-title accent-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Ultrasonic Sensor HC-SR04</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Ultrasonic Sensor</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <section class="portfolio section">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-md-6">
+            <img id="main-product-img" src="assets/img/product/hc-sr04.jpg" class="img-fluid rounded shadow mb-3" alt="Ultrasonic Sensor HC-SR04" />
+            <div class="d-flex gap-2 overflow-auto">
+              <img src="assets/img/product/hc-sr04.jpg" class="img-thumbnail" width="100" onclick="setMainImage(this)" alt="Front View" />
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <h2 class="fw-bold">Ultrasonic Sensor HC-SR04</h2>
+            <p class="text-muted">Measures distance using ultrasonic waves, great for obstacle detection and robotics applications.</p>
+            <h4><strong>Price:</strong> EGP 45</h4>
+            <p><strong>Operating Voltage:</strong> 5V</p>
+            <p><strong>Measuring Range:</strong> 2cm - 400cm</p>
+            <p><strong>Accuracy:</strong> ±3mm</p>
+            <p><strong>Interface:</strong> Digital (Trigger and Echo pins)</p>
+            <label for="qty-hcsr04" class="form-label mt-3">Quantity:</label>
+            <input type="number" id="qty-hcsr04" value="1" min="1" class="form-control w-50 mb-3" />
+            <button class="btn btn-primary w-100" onclick="addToCart('Ultrasonic Sensor HC-SR04', 45, 'qty-hcsr04')">Add to Cart</button>
+          </div>
+        </div>
+
+        <hr class="my-5" />
+        <h4 class="mb-4">Related Products</h4>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-arduino">
+            <div class="portfolio-content h-100 p-3 border rounded shadow-sm">
+              <a href="arduino-uno.html">
+                <img src="assets/img/product/arduino-uno.jpg" class="img-fluid mb-2 rounded" alt="Arduino UNO">
+              </a>
+              <div class="portfolio-info text-center">
+                <a href="arduino-uno.html" style="text-decoration: none; color: inherit;">
+                  <h5 class="card-title">Arduino UNO</h5>
+                </a>
+                <p>The most popular development board</p>
+                <p><strong>Price:</strong> EGP 450</p>
+                <input type="number" id="qty-uno" value="1" min="1" class="form-control mb-2">
+                <button class="btn btn-primary w-100" onclick="addToCart('Arduino UNO', 450, 'qty-uno')">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="toast-container" class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999;"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Bot Forge</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p><strong>Phone:</strong> <span>+201552781806</span></p>
+            <p><strong>Email:</strong> <span>borforge101@gmail.com</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    function addToCart(productName, price, qtyInputId) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const qty = parseInt(document.getElementById(qtyInputId).value) || 1;
+      if (qty <= 0) return;
+      cart = cart.filter((item) => item.name !== productName);
+      cart.push({ name: productName, price: price, qty: qty });
+      localStorage.setItem("cart", JSON.stringify(cart));
+      showToast(`${qty} × ${productName} added to cart.`);
+    }
+
+    function showToast(message) {
+      const toast = document.createElement("div");
+      toast.className = "toast align-items-center text-white bg-success border-0 show";
+      toast.role = "alert";
+      toast.innerHTML = `<div class="d-flex"><div class="toast-body">${message}</div><button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button></div>`;
+      document.getElementById("toast-container").appendChild(toast);
+      setTimeout(() => toast.remove(), 4000);
+    }
+
+    function setMainImage(imgElement) {
+      const mainImg = document.getElementById("main-product-img");
+      mainImg.src = imgElement.src;
+    }
+  </script>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

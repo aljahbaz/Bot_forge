@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Car Chassis - Bot Forge</title>
+  <meta name="description" content="Car chassis with wheels and motors for robotics and Arduino projects." />
+  <meta name="keywords" content="car chassis, robot car, arduino robot, robotics frame" />
+
+  <link href="assets/img/favicon.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Raleway&family=Nunito&display=swap" rel="stylesheet" />
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/css/main.css" rel="stylesheet" />
+</head>
+
+<body class="portfolio-page">
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container position-relative d-flex align-items-center">
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename"><img src="assets/img/logo.png" alt="" />Bot Forge</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="product.html" class="active">Product</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="page-title accent-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">Car Chassis</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Car Chassis</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <section class="portfolio section">
+      <div class="container py-5">
+        <div class="row">
+          <!-- Product Image -->
+          <div class="col-md-6">
+            <img id="main-product-img" src="assets/img/product/car.jpg" class="img-fluid rounded shadow mb-3" alt="Car Chassis" />
+          </div>
+
+          <!-- Product Info -->
+          <div class="col-md-6">
+            <h2 class="fw-bold">Car Chassis</h2>
+            <p class="text-muted">A complete car frame with wheels and motors for robotics and Arduino projects.</p>
+            <h4><strong>Price:</strong> EGP 400</h4>
+
+            <p><strong>Included Items:</strong></p>
+            <ul style="font-size: 14px;">
+              <li>1× Front and back acrylic plates</li>
+              <li>2× Wheels with rubber tires</li>
+              <li>2× DC Motors</li>
+              <li>Wiring kit</li>
+              <li>Screws and mounting hardware</li>
+            </ul>
+
+            <label for="qty-car" class="form-label mt-3">Quantity:</label>
+            <input type="number" id="qty-car" value="1" min="1" class="form-control w-50 mb-3" />
+            <button class="btn btn-primary w-100" onclick="addToCart('Car Chassis', 400, 'qty-car')">Add to Cart</button>
+            <div class="mt-4">
+                <a href="assets/datasheets/arduino-mega-datasheet.pdf" class="btn btn-outline-secondary w-100" target="_blank"
+                  >Download Datasheet</a
+                >
+              </div>
+          </div>
+        </div>
+
+        <hr class="my-5" />
+        <h4 class="mb-4">Related Products</h4>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-motors">
+            <div class="portfolio-content h-100 p-3 border rounded shadow-sm">
+              <a href="dc-motor.html">
+                <img src="assets/img/product/dc-motor.jpg" class="img-fluid mb-2 rounded" alt="DC Motor">
+              </a>
+              <div class="portfolio-info text-center">
+                <a href="dc-motor.html" style="text-decoration: none; color: inherit;">
+                  <h5 class="card-title">DC Motor</h5>
+                </a>
+                <p>Standard DC motor for basic projects</p>
+                <p><strong>Price:</strong> EGP 25</p>
+                <input type="number" id="qty-dcmotor" value="1" min="1" class="form-control mb-2">
+                <button class="btn btn-primary w-100" onclick="addToCart('DC Motor', 25, 'qty-dcmotor')">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <!-- L298N Motor Driver -->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-motors">
+            <div class="portfolio-content h-100 p-3 border rounded shadow-sm">
+              <a href="product-lm2596s.html">
+                <img src="assets/img/product/l298n.jpg" class="img-fluid mb-2 rounded" alt="L298N Motor Driver">
+              </a>
+              <div class="portfolio-info text-center">
+                <a href="product-lm2596s.html" style="text-decoration: none; color: inherit;">
+                  <h5 class="card-title">L298N Motor Driver</h5>
+                </a>
+                <p>Motor driver for DC motors and gearboxes</p>
+                <p><strong>Price:</strong> EGP 85</p>
+                <input type="number" id="qty-l298n" value="1" min="1" class="form-control mb-2">
+                <button class="btn btn-primary w-100" onclick="addToCart('L298N Motor Driver', 85, 'qty-l298n')">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="toast-container" class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999;"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Bot Forge</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p><strong>Phone:</strong> <span>+201552781806</span></p>
+            <p><strong>Email:</strong> <span>borforge101@gmail.com</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    function addToCart(productName, price, qtyInputId) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const qty = parseInt(document.getElementById(qtyInputId).value) || 1;
+      if (qty <= 0) return;
+      cart = cart.filter((item) => item.name !== productName);
+      cart.push({ name: productName, price: price, qty: qty });
+      localStorage.setItem("cart", JSON.stringify(cart));
+      showToast(`${qty} × ${productName} added to cart.`);
+    }
+
+    function showToast(message) {
+      const toast = document.createElement("div");
+      toast.className = "toast align-items-center text-white bg-success border-0 show";
+      toast.role = "alert";
+      toast.innerHTML = `<div class="d-flex"><div class="toast-body">${message}</div><button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button></div>`;
+      document.getElementById("toast-container").appendChild(toast);
+      setTimeout(() => toast.remove(), 4000);
+    }
+  </script>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
